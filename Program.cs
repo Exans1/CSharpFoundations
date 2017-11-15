@@ -1,4 +1,13 @@
-﻿using System;
+﻿/**************************************Header****************************************
+Sean Kim
+11/15/2017
+CSharpFoundations
+
+
+Console code for write line stolen from 
+https://social.msdn.microsoft.com/Forums/en-US/ca9ddcea-7487-4e69-8e52-cae4f5b66c37/c-help-how-to-get-user-input-and-have-code-responde-to-it?forum=Vsexpressvcs
+***************************************Header****************************************/
+using System;
 
 namespace CSharpFoundations
 {
@@ -36,6 +45,29 @@ namespace CSharpFoundations
 
                 Console.WriteLine("Incorrect response");
 
+            Console.ReadLine();
+
+            Console.WriteLine("Enter an number between 5 and 20.");
+            int myResponse = int.Parse(Console.ReadLine());
+            int i = 1;
+           
+            if (myResponse <= 20 && myResponse >= 5){
+                while (i <= myResponse) {
+                if(i % 2 == 0 ){
+                    Console.WriteLine(i + " is Even.");
+                }
+                else {
+                Console.WriteLine(i+ " is Odd.");
+                }
+                i++;
+                }
+            }
+            else {
+                Console.WriteLine("Invalid Responce");
+            }
+            
+            
+            Console.WriteLine("Push Enter to End program");
             Console.ReadLine();
         }
     }
