@@ -53,12 +53,13 @@ namespace CSharpFoundations
            
             if (myResponse <= 20 && myResponse >= 5){
                 while (i <= myResponse) {
-                if(i % 2 == 0 ){
+                /*if(i % 2 == 0 ){
                     Console.WriteLine(i + " is Even.");
                 }
                 else {
                 Console.WriteLine(i+ " is Odd.");
-                }
+                }*/
+                Console.WriteLine(i + (i % 2 == 0 ? " is Even": " is Odd"));
                 i++;
                 }
             }
