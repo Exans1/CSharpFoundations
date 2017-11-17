@@ -8,6 +8,7 @@ Console code for write line stolen from
 https://social.msdn.microsoft.com/Forums/en-US/ca9ddcea-7487-4e69-8e52-cae4f5b66c37/c-help-how-to-get-user-input-and-have-code-responde-to-it?forum=Vsexpressvcs
 ***************************************Header****************************************/
 using System;
+using System.Text;
 
 namespace CSharpFoundations
 {
@@ -47,6 +48,8 @@ namespace CSharpFoundations
 
             Console.ReadLine();
 
+            //Exercise 2
+
             Console.WriteLine("Enter an number between 5 and 20.");
             int myResponse = int.Parse(Console.ReadLine());
             int i = 1;
@@ -66,10 +69,20 @@ namespace CSharpFoundations
             else {
                 Console.WriteLine("Invalid Responce");
             }
-            
-            
+
+            // Exercise 3
+            string name1 = " "+name;
+            StringBuilder name2 = new StringBuilder(name1);
+            name2.Insert(0, "Goodbye");
+
+            name2.Append(", it was nice seeing you!");
+
+            Console.WriteLine(name2);
+
+
             Console.WriteLine("Push Enter to End program");
             Console.ReadLine();
+            
         }
     }
 }
