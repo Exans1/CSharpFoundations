@@ -13,11 +13,11 @@ namespace CSharpFoundations
     {
         static void Main(string[] args)
         {
-            string[] arr = new string[]{"Sansa", "Bran", "Eddard", "Arya"};
+            string gameOfThronesPremier = "April 17, 2011";
 
-             foreach (string names in arr){
-                Console.WriteLine(names); 
-             }
+             DateTime gameOfThronesDate = Convert.ToDateTime(gameOfThronesPremier);
+             
+             Console.WriteLine(gameOfThronesDate);
         }
     }
 }
