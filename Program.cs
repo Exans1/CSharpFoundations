@@ -3,9 +3,6 @@ Sean Kim
 11/15/2017
 CSharpFoundations
 
-
-Console code for write line stolen from 
-https://social.msdn.microsoft.com/Forums/en-US/ca9ddcea-7487-4e69-8e52-cae4f5b66c37/c-help-how-to-get-user-input-and-have-code-responde-to-it?forum=Vsexpressvcs
 ***************************************Header****************************************/
 using System;
 using System.Text;
@@ -16,72 +13,16 @@ namespace CSharpFoundations
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Please type in your name.");
+            decimal? bonus = null;
+            bool hasBonus = false;
 
-            string name = Console.ReadLine();
-
-            Console.WriteLine("Hello {0} how are you on this fine day? Press 1 for Good or 2 for bad.", name);
-
-            int result;
-
-            if (int.TryParse(Console.ReadLine(), out result))
-
-            {
-
-                if (result == 1)
-
-                    Console.WriteLine("Well {0} I am glad to hear it, cool!", name);
-
-                else if (result == 2)
-
-                    Console.WriteLine("Well {0} I am sorry to hear it, that sucks!", name);
-
-                else
-
-                    Console.WriteLine("Incorrect response");
-
+            if(bonus.HasValue){
+                hasBonus = true;
+                Console.WriteLine(hasBonus);
             }
-
-            else
-
-                Console.WriteLine("Incorrect response");
-
-            Console.ReadLine();
-
-            //Exercise 2
-
-            Console.WriteLine("Enter an number between 5 and 20.");
-            int myResponse = int.Parse(Console.ReadLine());
-            int i = 1;
-           
-            if (myResponse <= 20 && myResponse >= 5){
-                while (i <= myResponse) {
-                /*if(i % 2 == 0 ){
-                    Console.WriteLine(i + " is Even.");
-                }
-                else {
-                Console.WriteLine(i+ " is Odd.");
-                }*/
-                Console.WriteLine(i + (i % 2 == 0 ? " is Even": " is Odd"));
-                i++;
-                }
+            else{
+                Console.WriteLine(false);
             }
-            else {
-                Console.WriteLine("Invalid Responce");
-            }
-
-            // Exercise 3
-            string name1 = " "+name;
-            StringBuilder name2 = new StringBuilder(name1);
-            name2.Insert(0, "Goodbye");
-
-            name2.Append(", it was nice seeing you!");
-
-            Console.WriteLine(name2);
-
-
-            Console.WriteLine("Push Enter to End program");
-            Console.ReadLine();
             
         }
     }
