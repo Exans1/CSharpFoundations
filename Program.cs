@@ -17,7 +17,6 @@ namespace CSharpFoundations
 
              DateTime gameOfThronesDate = Convert.ToDateTime(gameOfThronesPremier);
              
-             Console.WriteLine(gameOfThronesDate);
         }
     }
 }
