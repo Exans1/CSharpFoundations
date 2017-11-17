@@ -13,17 +13,11 @@ namespace CSharpFoundations
     {
         static void Main(string[] args)
         {
-            decimal? bonus = null;
-            bool hasBonus = false;
+            string[] arr = new string[]{"Sansa", "Bran", "Eddard", "Arya"};
 
-            if(bonus.HasValue){
-                hasBonus = true;
-                Console.WriteLine(hasBonus);
-            }
-            else{
-                Console.WriteLine(false);
-            }
-            
+             foreach (string names in arr){
+                Console.WriteLine(names); 
+             }
         }
     }
 }
